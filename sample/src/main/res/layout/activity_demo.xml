@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+    Copyright 2016 Dmytro Zaitsev
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<LinearLayout android:id="@+id/activity_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  tools:context="com.dzaitsev.radarchartview.DemoActivity">
+
+  <com.dzaitsev.android.widget.RadarChartView
+    android:id="@+id/radar_chart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="30dp"
+    app:axisColor="#22737b"
+    app:axisMax="280"
+    app:axisTick="75"
+    app:axisWidth="1dp"
+    app:chartColor="#C8FF4081"
+    app:chartStyle="stroke"
+    app:chartWidth="3dp"
+    app:circlesOnly="false"
+    app:endColor="#c3e3e5"
+    app:startColor="#5f9ca1"
+    app:textSize="12sp" />
+
+  <SeekBar
+    android:id="@+id/axisTick"
+    style="@style/Widget.AppCompat.SeekBar.Discrete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="14"
+    android:progress="5" />
+
+  <SeekBar
+    android:id="@+id/axis"
+    style="@style/Widget.AppCompat.SeekBar.Discrete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="11"
+    android:progress="5" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckBox
+      android:id="@+id/circlesOnly"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Circles only" />
+
+    <CheckBox
+      android:id="@+id/autoSize"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:checked="true"
+      android:text="Autosize" />
+
+    <CheckBox
+      android:id="@+id/fillStroke"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Fill/Stroke" />
+  </LinearLayout>
+
+  <Spinner
+    android:id="@+id/spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <SeekBar
+    android:id="@+id/value"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
